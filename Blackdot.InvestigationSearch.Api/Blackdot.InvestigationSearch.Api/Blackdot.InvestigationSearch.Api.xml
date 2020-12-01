@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Blackdot.InvestigationSearch.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Blackdot.InvestigationSearch.Api.Controllers.SearchController">
+            <summary>
+            The Search controller containing endpoints for searching for results
+            </summary>
+        </member>
+        <member name="M:Blackdot.InvestigationSearch.Api.Controllers.SearchController.GetSearchResults(System.String)">
+            <summary>
+            Get search results for a given search term.
+            </summary>
+            <param name="searchTerm">The search term for finding search results</param>
+            <returns>An action result containing the answer to the expression</returns>
+            <response code="200">search results succesfully found</response>
+            <response code="400">The search term is invalid</response>
+            <response code="500">An unexpected exception has occured when searching for results</response>
+        </member>
+        <member name="T:Blackdot.InvestigationSearch.Api.Wrapper.CacheWrapper">
+            <summary>
+            A wrapper for server side caching
+            </summary>
+        </member>
+        <member name="M:Blackdot.InvestigationSearch.Api.Wrapper.CacheWrapper.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="memoryCache">The instance of Microsoft.Extensions.Caching.Memory.MemoryCache</param>
+        </member>
+        <member name="M:Blackdot.InvestigationSearch.Api.Wrapper.CacheWrapper.Set(System.String,System.Collections.Generic.List{Blackdot.InvestigationSearch.Api.Dtos.SearchResponse})">
+            <summary>
+            Set the cache
+            </summary>
+            <param name="key">cache key</param>
+            <param name="value">cache value</param>
+        </member>
+        <member name="M:Blackdot.InvestigationSearch.Api.Wrapper.CacheWrapper.TryGetValue(System.String,System.Collections.Generic.List{Blackdot.InvestigationSearch.Api.Dtos.SearchResponse}@)">
+            <summary>
+            Get value from cache
+            </summary>
+            <param name="key">cache key</param>
+            <param name="result">cache result</param>
+        </member>
+        <member name="M:Blackdot.InvestigationSearch.Api.Wrapper.ICacheWrapper.Set(System.String,System.Collections.Generic.List{Blackdot.InvestigationSearch.Api.Dtos.SearchResponse})">
+            <summary>
+            Set the cache
+            </summary>
+            <param name="key">cache key</param>
+            <param name="value">cache value</param>
+        </member>
+        <member name="M:Blackdot.InvestigationSearch.Api.Wrapper.ICacheWrapper.TryGetValue(System.String,System.Collections.Generic.List{Blackdot.InvestigationSearch.Api.Dtos.SearchResponse}@)">
+            <summary>
+            Get value from cache
+            </summary>
+            <param name="key">cache key</param>
+            <param name="result">cache result</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

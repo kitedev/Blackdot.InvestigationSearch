@@ -1,0 +1,27 @@
+<div fxLayoutAlign="center center" fxFlexFill> 
+    <form [formGroup]="searchForm" (submit)="search()">
+        <div><label class="blackdot">blackdot</label></div>
+        <mat-form-field>
+            <input class="margin-left-10" mat-icon-button aria-label="Clear" matInput [(ngModel)]="searchTerm" formControlName="search" [errorStateMatcher]="matcher" placeholder="Investigate" value="">
+            <mat-error *ngIf="searchForm.controls.search.hasError('required')">
+                A search term is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="searchForm.controls.search.hasError('minlength')">
+                A search term must be at least <strong>3 characters long</strong>
+            </mat-error>
+            <button type="submit" class="search-bar" matSuffix mat-icon-button [disabled]="!searchForm.valid" color="primary">
+                <mat-icon>search</mat-icon>
+            </button>
+        </mat-form-field>
+
+
+
+        <!-- <mat-form-field class="example-form-field">
+            <mat-label>Clearable input</mat-label>
+            <input matInput type="text" [(ngModel)]="value">
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field> -->
+    </form>
+</div>

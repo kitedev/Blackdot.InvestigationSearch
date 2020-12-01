@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngleSharp" Version="0.14.0" />
+    <PackageReference Include="FluentValidation" Version="9.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.Core\Blackdot.InvestigationSearch.Core.csproj" />
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.SearcEngine.Interface\Blackdot.InvestigationSearch.SearchEngines.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

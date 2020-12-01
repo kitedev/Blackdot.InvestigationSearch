@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\my git\Blackdot.InvestigationSearch\Blackdot.InvestigationSearch.Api\Blackdot.InvestigationSearch.Api\Blackdot.InvestigationSearch.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.Queries.Handlers\Blackdot.InvestigationSearch.Queries.Handlers.csproj" />
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.Queries\Blackdot.InvestigationSearch.Queries.csproj" />
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.SearcEngine.Interface\Blackdot.InvestigationSearch.SearchEngines.Interfaces.csproj" />
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.SearchEngine\Blackdot.InvestigationSearch.SearchEngines.csproj" />
+    <ProjectReference Include="..\Blackdot.InvestigationSearch.Validators\Blackdot.InvestigationSearch.Validators.csproj" />
+  </ItemGroup>
+
+
+</Project>

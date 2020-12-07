@@ -12,7 +12,7 @@ export class SearchService {
 
   getSearchResults(searchTerm:string) : Observable<SearchResult[]>
   {
-    let url = "https://localhost:44375/api/search?q=" + searchTerm;
+    let url = "https://localhost:44375/api/search?q=" + encodeURIComponent(searchTerm);
 
     return this.http.get<SearchResult[]>(url);
   }

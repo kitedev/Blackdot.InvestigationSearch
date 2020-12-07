@@ -23,20 +23,22 @@ Blackdot.InvestigationSearch.Api - The API
 # Setup
 
 To run the web app, you must:<br />
-0. Install npm
-1. Install Visual Studio Code
-2. Open Blackdot-InvestigationSearch-Client folder in Visual Studio Code
-3. Open Terminal (in Visual Studio Code), change directory to
+
+1. Install npm
+2. Install Visual Studio Code
+3. Open Blackdot-InvestigationSearch-Client folder in Visual Studio Code
+4. Open Terminal (in Visual Studio Code), change directory to
 Blackdot-InvestigationSearch-Client and run 'npm install'.
 (This should install everything you need. You may need to 
 'npm install -g @angular/cli' to ensure you have Angular CLI)
-4. Run 'ng serve' to host and run the app. Usually, this runs on http://localhost:4200/ 
+5. Run 'ng serve' to host and run the app. Usually, this runs on http://localhost:4200/ 
 
 To run the API, you must:<br />
-0. Install Visual Studio 2019 (if you haven't already :/)
-1. Open the solution file (Blackdot.InvestigationSearch.Api.sln) in Blackdot.InvestigationSearch.Api
-2. Do a nuget package restore (dotnet restore)
-3. Run. Hit f5.
+
+1. Install Visual Studio 2019 (if you haven't already :/)
+2. Open the solution file (Blackdot.InvestigationSearch.Api.sln) in Blackdot.InvestigationSearch.Api
+3. Do a nuget package restore (dotnet restore)
+4. Run. Hit f5.
 
 (Note: the web app looks for the API on port 44375 (i.e. 'https://localhost:44375/api/search')
 (i know it's hardcoded, and should be ready from a config)

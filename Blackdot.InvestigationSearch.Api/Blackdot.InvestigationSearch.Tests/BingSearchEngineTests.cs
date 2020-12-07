@@ -54,7 +54,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 config["BingSearchResultSelector"]);
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm).ToList();
+            var results = searchEngine.GetSearchResults(searchTerm).ToList();
 
             // assert
             Assert.IsNotNull(results);

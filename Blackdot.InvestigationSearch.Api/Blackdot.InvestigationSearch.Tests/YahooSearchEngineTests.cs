@@ -56,7 +56,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 config["YahooSearchResultSelector"]);
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm).ToList();
+            var results = searchEngine.GetSearchResults(searchTerm).ToList();
 
             // assert
             Assert.IsNotNull(results);

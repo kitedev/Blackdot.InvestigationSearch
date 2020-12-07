@@ -58,7 +58,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 "div.result");
 
             // act
-            var results = searchEngine.GetSearchResultsAsync("RAF");
+            var results = searchEngine.GetSearchResults("RAF");
 
             // assert
             Assert.IsNotNull(results);
@@ -132,7 +132,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 "div.result");
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm).ToList();
+            var results = searchEngine.GetSearchResults(searchTerm).ToList();
 
             // assert
             Assert.IsNotNull(results);
@@ -189,7 +189,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 "div.result");
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm);
+            var results = searchEngine.GetSearchResults(searchTerm);
 
             // assert
             Assert.IsNotNull(results);
@@ -235,7 +235,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 "div.result");
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm);
+            var results = searchEngine.GetSearchResults(searchTerm);
 
             // assert
             Assert.IsNotNull(results);
@@ -278,7 +278,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 "div.result");
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm);
+            var results = searchEngine.GetSearchResults(searchTerm);
 
             // assert
             Assert.IsNotNull(results);
@@ -320,7 +320,7 @@ namespace Blackdot.InvestigationSearch.Tests
                                                 "div.result");
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm);
+            var results = searchEngine.GetSearchResults(searchTerm);
 
             // assert
             Assert.IsNotNull(results);

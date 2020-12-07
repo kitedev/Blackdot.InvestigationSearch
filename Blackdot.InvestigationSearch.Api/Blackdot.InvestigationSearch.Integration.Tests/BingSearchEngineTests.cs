@@ -41,7 +41,7 @@ namespace Blackdot.InvestigationSearch.Integration.Tests
                                                 searchResultSelector);
 
             // act
-            var results = searchEngine.GetSearchResultsAsync(searchTerm);
+            var results = searchEngine.GetSearchResults(searchTerm);
 
             // assert
             Assert.IsNotNull(results);

@@ -41,7 +41,7 @@ namespace Blackdot.InvestigationSearch.SearchEngines
         /// </summary>
         /// <param name="searchTerm">The search term to find search results for</param>
         /// <returns>A collection of search results</returns>
-        public IEnumerable<SearchResult> GetSearchResultsAsync(string searchTerm)
+        public IEnumerable<SearchResult> GetSearchResults(string searchTerm)
         {
             var encodedSearchTerm = this.queryStringEncoder.Encode(searchTerm);
 

@@ -56,7 +56,7 @@ namespace Blackdot.InvestigationSearch.Queries.Handlers
             {
                 try
                 {
-                    var results = x.GetSearchResultsAsync(request.SearchTerm);
+                    var results = x.GetSearchResults(request.SearchTerm);
 
                     lock (lockObject)
                     {

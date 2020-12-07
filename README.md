@@ -16,7 +16,7 @@ Visual Studio Community 2019
 
 
 # Repository structure
-Blackdot-InvestigationSearch-Client - The Angular metasearch engine web app
+Blackdot-InvestigationSearch-Client - The Angular metasearch engine web app<br />
 Blackdot.InvestigationSearch.Api - The API
 
 

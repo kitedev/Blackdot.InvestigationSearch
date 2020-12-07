@@ -45,9 +45,9 @@ namespace Blackdot.InvestigationSearch.SearchEngines
         {
             var encodedSearchTerm = this.queryStringEncoder.Encode(searchTerm);
 
-            var uri = this.searchEngineUrl + encodedSearchTerm;
+            var urlQuery = this.searchEngineUrl + encodedSearchTerm;
 
-            var document = this.htmlParser.Parse(uri);
+            var document = this.htmlParser.Parse(urlQuery);
 
             var content = document.QuerySelectorAll(searchResultSelector);
 
@@ -55,7 +55,7 @@ namespace Blackdot.InvestigationSearch.SearchEngines
 
             if (content != null)
             {
-                //TODO: parallele forech?
+                //TODO: parallel foreach?
                 foreach (var c in content)
                 {
                     var url = searchEngineSelector.GetUrl(c);
@@ -68,8 +68,6 @@ namespace Blackdot.InvestigationSearch.SearchEngines
                     }
                 }
             }
-
-            // TODO: throw exception if no results
 
             return searchResults;
 

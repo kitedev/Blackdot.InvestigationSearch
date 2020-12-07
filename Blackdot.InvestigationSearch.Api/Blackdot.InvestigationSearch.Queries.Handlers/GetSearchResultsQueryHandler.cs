@@ -4,6 +4,7 @@ using Blackdot.InvestigationSearch.SearchEngines.Interfaces;
 using FluentValidation;
 using MediatR;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -48,17 +49,36 @@ namespace Blackdot.InvestigationSearch.Queries.Handlers
 
             List<SearchResult> searchResults = new List<SearchResult>();
 
+            var exceptions = new ConcurrentQueue<Exception>();
             var lockObject = new Object();
 
             var result = Parallel.ForEach(searchEngines, x =>
             {
-                var results = x.GetSearchResultsAsync(request.SearchTerm);
-
-                lock (lockObject)
+                try
                 {
-                    searchResults.AddRange(results);
+                    var results = x.GetSearchResultsAsync(request.SearchTerm);
+
+                    lock (lockObject)
+                    {
+                        searchResults.AddRange(results);
+                    }
+                }
+                catch (HtmlParserException ex) 
+                {
+                    //TODO: log exception & for which search engine
+                    exceptions.Enqueue(ex);
+                }
+                catch (Exception ex)
+                {
+                    //TODO: log exception & for which search engine
+                    exceptions.Enqueue(ex);
                 }
             });
+
+            if (exceptions.Count >= searchEngines.Count())
+            {
+                throw new AggregateException(exceptions);
+            }
 
             // distinct by url only
             searchResults = searchResults

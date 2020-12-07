@@ -57,8 +57,21 @@ namespace Blackdot.InvestigationSearch.Api.Controllers
                 {
                     return BadRequest(ex.Message);
                 }
+                catch (AggregateException ae)
+                {
+                    var errorMessage = "";
+
+                    foreach (var ex in ae.Flatten().InnerExceptions)
+                    {
+                        errorMessage += ex.Message + Environment.NewLine;
+                    }
+
+                    //TODO: log exception details
+                    return StatusCode(StatusCodes.Status500InternalServerError, errorMessage);
+                }
                 catch (Exception ex)
                 {
+                    //TODO: log exception details
                     return StatusCode(StatusCodes.Status500InternalServerError, "There was an unexpected error when searching for the search term. " +
                         "Please contact IT quoting the search term.");
                 }

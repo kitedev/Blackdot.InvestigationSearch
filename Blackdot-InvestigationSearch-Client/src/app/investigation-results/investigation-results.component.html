@@ -1,4 +1,4 @@
-<div fxLayout="column" *ngIf="displayResult" fxLayoutAlign="center center" fxFlexFill> 
+<div fxLayout="column" [hidden]="displayResult" fxLayoutAlign="center center" fxFlexFill> 
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z0">
 

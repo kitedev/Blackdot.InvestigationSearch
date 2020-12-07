@@ -11,7 +11,7 @@ The solution consists of two projects:
 
 # Tools used
 
-Visual Studio Code
+Visual Studio Code<br />
 Visual Studio Community 2019
 
 
@@ -22,7 +22,7 @@ Blackdot.InvestigationSearch.Api - The API
 
 # Setup
 
-To run the web app, you must:
+To run the web app, you must:<br />
 0. Install npm
 1. Install Visual Studio Code
 2. Open Blackdot-InvestigationSearch-Client folder in Visual Studio Code
@@ -32,7 +32,7 @@ Blackdot-InvestigationSearch-Client and run 'npm install'.
 'npm install -g @angular/cli' to ensure you have Angular CLI)
 4. Run 'ng serve' to host and run the app. Usually, this runs on http://localhost:4200/ 
 
-To run the API, you must:
+To run the API, you must:<br />
 0. Install Visual Studio 2019 (if you haven't already :/)
 1. Open the solution file (Blackdot.InvestigationSearch.Api.sln) in Blackdot.InvestigationSearch.Api
 2. Do a nuget package restore (dotnet restore)
@@ -46,15 +46,15 @@ This can be changed in launchSettings.json ("sslPort": 44375), in the API soluti
 
 # Highlights
 
-Web App Solution Structure
-API Solution structure
-CQRS / Mediator pattern
-Validation
-SOLID principles
-Unit/Integration tests
-Swagger/OpenAPI Specification
-Server-side caching
-Thoughts & reflections
+- Web App Solution Structure
+- API Solution structure
+- CQRS / Mediator pattern
+- Validation
+- SOLID principles
+- Unit/Integration tests
+- Swagger/OpenAPI Specification
+- Server-side caching
+- Thoughts & reflections
 
 # Web App Solution Structure
 
